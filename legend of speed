@@ -1,0 +1,134 @@
+-- Legend of speed
+-- Version: 3.2
+
+-- Instances:
+
+local GrapeHub = Instance.new("ScreenGui")
+local GrapeFrame = Instance.new("Frame")
+local GrapeHub_V1 = Instance.new("TextLabel")
+local TextLabel = Instance.new("TextLabel")
+local InfSpeed = Instance.new("TextButton")
+local InfGems = Instance.new("TextButton")
+local TextLabel_2 = Instance.new("TextLabel")
+local Close = Instance.new("TextButton")
+local TextButton = Instance.new("TextButton")
+
+--Properties:
+
+GrapeHub.Name = "GrapeHub"
+GrapeHub.Parent = game.CoreGui
+
+GrapeFrame.Name = "GrapeFrame"
+GrapeFrame.Parent = GrapeHub
+GrapeFrame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+GrapeFrame.Position = UDim2.new(0.260958195, 0, 0.189915985, 0)
+GrapeFrame.Size = UDim2.new(0, 185, 0, 349)
+GrapeFrame.Draggable = true
+GrapeFrame.Active = true
+GrapeFrame.Selectable = true
+
+GrapeHub_V1.Name = "GrapeHub_V1"
+GrapeHub_V1.Parent = GrapeFrame
+GrapeHub_V1.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+GrapeHub_V1.BorderColor3 = Color3.fromRGB(0, 0, 0)
+GrapeHub_V1.Position = UDim2.new(0.0478764698, 0, 0, 0)
+GrapeHub_V1.Size = UDim2.new(0, 168, 0, 50)
+GrapeHub_V1.Font = Enum.Font.SourceSans
+GrapeHub_V1.Text = "GrapeHub V1"
+GrapeHub_V1.TextColor3 = Color3.fromRGB(170, 0, 255)
+GrapeHub_V1.TextSize = 35.000
+
+TextLabel.Parent = GrapeFrame
+TextLabel.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.Position = UDim2.new(0.0478764698, 0, 0.143266469, 0)
+TextLabel.Size = UDim2.new(0, 169, 0, 50)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "Legend Of Speed"
+TextLabel.TextColor3 = Color3.fromRGB(170, 0, 255)
+TextLabel.TextSize = 30.000
+TextLabel.TextStrokeColor3 = Color3.fromRGB(170, 0, 255)
+
+InfSpeed.Name = "InfSpeed"
+InfSpeed.Parent = GrapeFrame
+InfSpeed.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+InfSpeed.BorderColor3 = Color3.fromRGB(0, 0, 0)
+InfSpeed.Position = UDim2.new(0.0478764698, 0, 0.315186232, 0)
+InfSpeed.Size = UDim2.new(0, 168, 0, 50)
+InfSpeed.Font = Enum.Font.SourceSans
+InfSpeed.Text = "Inf Speed"
+InfSpeed.TextColor3 = Color3.fromRGB(170, 0, 255)
+InfSpeed.TextSize = 24.000
+InfSpeed.MouseButton1Down:connect(function()
+	while true do
+		wait(0.1)
+		game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb", "Red Orb", "City")
+	end
+end)
+
+InfGems.Name = "InfGems"
+InfGems.Parent = GrapeFrame
+InfGems.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+InfGems.BorderColor3 = Color3.fromRGB(0, 0, 0)
+InfGems.Position = UDim2.new(0.0478764698, 0, 0.541547298, 0)
+InfGems.Size = UDim2.new(0, 168, 0, 50)
+InfGems.Font = Enum.Font.SourceSans
+InfGems.Text = "Inf Gems"
+InfGems.TextColor3 = Color3.fromRGB(170, 0, 255)
+InfGems.TextSize = 24.000
+InfGems.MouseButton1Down:connect(function()
+	while true do
+		wait(0.1)
+		game.ReplicatedStorage.rEvents.orbEvent:FireServer("collectOrb", "Gem", "City")
+	end
+end)
+
+TextLabel_2.Parent = GrapeFrame
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_2.Position = UDim2.new(0, 0, 0.710601807, 0)
+TextLabel_2.Size = UDim2.new(0, 185, 0, 50)
+TextLabel_2.Font = Enum.Font.SourceSans
+TextLabel_2.Text = "Check My discord (Coming Soon)"
+TextLabel_2.TextColor3 = Color3.fromRGB(170, 0, 255)
+TextLabel_2.TextSize = 14.000
+TextLabel_2.TextStrokeColor3 = Color3.fromRGB(170, 0, 255)
+
+Close.Name = "Close"
+Close.Parent = GrapeFrame
+Close.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Close.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Close.Position = UDim2.new(0.0432432443, 0, 0.853868186, 0)
+Close.Size = UDim2.new(0, 168, 0, 50)
+Close.Font = Enum.Font.SourceSans
+Close.Text = "Close"
+Close.TextColor3 = Color3.fromRGB(255, 0, 0)
+Close.TextSize = 25.000
+Close.MouseButton1Down:connect(function()
+	open.Visible = true
+	GrapeFrame.Visible = false
+end)
+
+TextButton.Parent = GrapeFrame
+TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.Position = UDim2.new(1.16216218, 0, 1.26934099, 0)
+TextButton.Size = UDim2.new(0, 200, 0, 50)
+TextButton.Visible = false
+TextButton.Font = Enum.Font.SourceSans
+TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.TextSize = 14.000
+
+open.Name = "open"
+open.Parent = GrapeFrame
+open.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+open.Position = UDim2.new(1.16216218, 0, 1.26934099, 0)
+open.Size = UDim2.new(0, 200, 0, 50)
+open.Visible = false
+open.Font = Enum.Font.SourceSans
+open.Text = "open"
+open.TextColor3 = Color3.fromRGB(0, 0, 0)
+open.TextSize = 14.000
+open.MouseButton1Down:connect(function()
+	GrapeFrame.Visible = true
+	open.Visible = false
+end)
